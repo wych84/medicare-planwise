@@ -28,6 +28,7 @@ const plans = [
     tag: "Supplemental",
     body: "Round out your coverage with policies that help with the costs Medicare doesn't — so an unexpected diagnosis or hospital stay doesn't derail your budget.",
     points: ["Cancer, heart attack & stroke", "Hospital indemnity", "Dental, vision & hearing"],
+    featured: true,
   },
 ]
 
