@@ -76,12 +76,6 @@ export function Hero() {
               priority
             />
           </div>
-          <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-5 shadow-md sm:block">
-            <p className="font-serif text-3xl font-semibold text-foreground">$0</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              cost to you — I&apos;m paid by carriers, not by you
-            </p>
-          </div>
         </div>
       </div>
     </section>

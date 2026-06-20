@@ -22,6 +22,12 @@ const plans = [
   },
 ]
 
+const ancillary = [
+  "Cancer, heart attack & stroke",
+  "Hospital indemnity",
+  "Dental, vision & hearing",
+]
+
 export function Plans() {
   return (
     <section id="plans" className="bg-card">
@@ -96,6 +102,30 @@ export function Plans() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-border bg-background p-8 md:flex md:items-center md:justify-between md:gap-8">
+          <div className="max-w-xl">
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">
+              Ancillary products
+            </p>
+            <h3 className="mt-2 font-serif text-2xl font-semibold text-foreground">
+              Extra protection beyond your Medicare plan
+            </h3>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              Round out your coverage with supplemental policies that help with the costs Medicare
+              doesn&apos;t — so an unexpected diagnosis or hospital stay doesn&apos;t derail your
+              budget.
+            </p>
+          </div>
+          <ul className="mt-6 grid shrink-0 gap-3 md:mt-0">
+            {ancillary.map((item) => (
+              <li key={item} className="flex items-center gap-3 text-foreground">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
