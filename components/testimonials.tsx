@@ -9,13 +9,13 @@ const testimonials = [
   },
   {
     quote:
-      "They found a plan that kept both my doctors and saved me almost $90 a month. Honest, kind, and genuinely on my side.",
+      "My advisor found a plan that kept both my doctors and saved me almost $90 a month. Honest, kind, and genuinely on my side.",
     name: "James T.",
     detail: "Medicare Advantage, Arizona",
   },
   {
     quote:
-      "What I appreciated most was that they kept checking in after I enrolled. It's rare to feel this cared for these days.",
+      "What I appreciated most was the personal check-ins after I enrolled. It's rare to feel this cared for these days.",
     name: "Dorothy & Bill K.",
     detail: "Part D review, Florida",
   },
@@ -26,7 +26,7 @@ export function Testimonials() {
     <section className="bg-secondary/40">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent">Member stories</p>
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">Client stories</p>
           <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
             Real people, real peace of mind
           </h2>

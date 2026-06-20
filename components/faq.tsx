@@ -6,23 +6,23 @@ import { Plus, Minus } from "lucide-react"
 const faqs = [
   {
     q: "Does it cost anything to work with Medicare PlanWise?",
-    a: "No. Our services are completely free to you. We're compensated by the insurance carriers when you enroll, and that compensation is the same regardless of which plan you choose — so our advice stays unbiased.",
+    a: "No. My services are completely free to you. I'm compensated by the insurance carriers when you enroll, and that compensation is the same regardless of which plan you choose — so my advice stays unbiased.",
   },
   {
     q: "Are you connected to one specific insurance company?",
-    a: "No. We're an independent advisory and work with all major national and regional carriers. That independence lets us recommend what's genuinely best for you, not what's best for a single company.",
+    a: "No. Medicare PlanWise is an independent advisory practice, and I work with all major national and regional carriers. That independence lets me recommend what's genuinely best for you, not what's best for a single company.",
   },
   {
     q: "When can I make changes to my Medicare plan?",
-    a: "Most people can make changes during the Annual Enrollment Period (October 15 – December 7), as well as during certain special enrollment periods. Your advisor will help you understand which windows apply to you.",
+    a: "Most people can make changes during the Annual Enrollment Period (October 15 – December 7), as well as during certain special enrollment periods. I'll help you understand which windows apply to you.",
   },
   {
     q: "What should I have ready for my consultation?",
-    a: "It helps to have a list of your current doctors, your prescriptions and dosages, and your Medicare card if you already have one. Don't worry if you're missing something — we'll guide you through it.",
+    a: "It helps to have a list of your current doctors, your prescriptions and dosages, and your Medicare card if you already have one. Don't worry if you're missing something — I'll guide you through it.",
   },
   {
-    q: "Will I keep working with the same advisor?",
-    a: "Yes. You'll have a dedicated advisor who knows your situation and is available year-round for questions, claims help, and annual plan reviews.",
+    q: "Who will I be working with?",
+    a: "You'll work directly with me from start to finish. I know your situation personally and am available year-round for questions, claims help, and annual plan reviews.",
   },
 ]
 

@@ -4,7 +4,7 @@ const items = [
   {
     icon: Scale,
     title: "Unbiased by design",
-    body: "We compare plans across all major carriers — never steering you toward one company's products.",
+    body: "I compare plans across all major carriers — never steering you toward one company's products.",
   },
   {
     icon: HandHeart,
@@ -14,18 +14,18 @@ const items = [
   {
     icon: ShieldCheck,
     title: "Licensed & certified",
-    body: "Every advisor is state-licensed and recertified annually on the latest Medicare rules.",
+    body: "State-licensed and recertified annually on the latest Medicare rules.",
   },
   {
     icon: Clock,
     title: "Support that lasts",
-    body: "We're here long after enrollment — for claims questions, annual reviews, and plan changes.",
+    body: "I'm here long after enrollment — for claims questions, annual reviews, and plan changes.",
   },
 ]
 
 export function TrustBar() {
   return (
-    <section className="border-y border-border bg-card" aria-label="Why members trust us">
+    <section className="border-y border-border bg-card" aria-label="Why clients trust me">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-px overflow-hidden px-5 py-4 sm:grid-cols-2 md:px-8 lg:grid-cols-4">
         {items.map((item) => (
           <div key={item.title} className="flex gap-4 px-2 py-6 lg:px-6">

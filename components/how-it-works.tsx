@@ -1,18 +1,18 @@
 const steps = [
   {
     n: "01",
-    title: "Tell us about you",
+    title: "Tell me about you",
     body: "Share your doctors, prescriptions, and priorities in a relaxed, no-pressure conversation — by phone or video.",
   },
   {
     n: "02",
-    title: "We compare your options",
-    body: "Your advisor analyzes plans from every major carrier and explains the trade-offs in plain language.",
+    title: "I compare your options",
+    body: "I analyze plans from every major carrier and explain the trade-offs in plain language.",
   },
   {
     n: "03",
     title: "Enroll with confidence",
-    body: "Once you're ready, we handle the paperwork and stay by your side through enrollment and beyond.",
+    body: "Once you're ready, I handle the paperwork and stay by your side through enrollment and beyond.",
   },
 ]
 

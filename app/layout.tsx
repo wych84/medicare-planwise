@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Medicare PlanWise — Personalized Medicare Guidance You Can Trust',
   description:
-    'Medicare PlanWise helps you understand your options and choose the right Medicare plan with unbiased, personalized guidance from licensed advisors.',
+    'Medicare PlanWise is an independent advisory practice helping you understand your options and choose the right Medicare plan with unbiased, personalized one-on-one guidance.',
   generator: 'v0.app',
   icons: {
     icon: [

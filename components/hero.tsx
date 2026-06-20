@@ -17,8 +17,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Navigating Medicare can feel overwhelming. Our licensed advisors guide you through your
-            options with patience and honesty — so you choose a plan that truly fits your life.
+            Navigating Medicare can feel overwhelming. As an independent, licensed advisor, I guide
+            you one-on-one through your options with patience and honesty — so you choose a plan that
+            truly fits your life.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -57,7 +58,7 @@ export function Hero() {
                 ))}
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                Trusted by <span className="font-semibold text-foreground">12,000+</span> members
+                Trusted by <span className="font-semibold text-foreground">1,000+</span> clients
                 nationwide
               </p>
             </div>
@@ -68,7 +69,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-2xl border border-border shadow-sm">
             <Image
               src="/hero-couple.png"
-              alt="A retired couple reviewing their Medicare options with a trusted advisor"
+              alt="A retired couple reviewing their Medicare options with their trusted independent advisor"
               width={720}
               height={820}
               className="h-full w-full object-cover"
@@ -78,7 +79,7 @@ export function Hero() {
           <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-5 shadow-md sm:block">
             <p className="font-serif text-3xl font-semibold text-foreground">$0</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              cost to you — we&apos;re paid by carriers, not by you
+              cost to you — I&apos;m paid by carriers, not by you
             </p>
           </div>
         </div>

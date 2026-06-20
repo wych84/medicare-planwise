@@ -32,8 +32,7 @@ export function Education() {
             Knowledge that puts you in control
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Plain-spoken guides written by our advisors to help you make informed, confident
-            decisions.
+            Plain-spoken guides I&apos;ve written to help you make informed, confident decisions.
           </p>
         </div>
         <a

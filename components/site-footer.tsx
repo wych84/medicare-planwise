@@ -10,8 +10,8 @@ const columns = [
     links: ["Education Center", "Enrollment Periods", "Eligibility Guide", "Glossary"],
   },
   {
-    title: "Company",
-    links: ["About Us", "Our Advisors", "Careers", "Contact"],
+    title: "Practice",
+    links: ["About Me", "My Approach", "Testimonials", "Contact"],
   },
 ]
 
@@ -29,8 +29,8 @@ export function SiteFooter() {
               className="h-16 w-auto mix-blend-multiply"
             />
             <p className="mt-4 max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
-              Independent, licensed Medicare guidance — helping you choose with clarity and
-              confidence.
+              Independent, licensed Medicare guidance — personally helping you choose with clarity
+              and confidence.
             </p>
           </div>
 
@@ -55,8 +55,8 @@ export function SiteFooter() {
 
         <div className="mt-14 border-t border-border pt-8">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            We do not offer every plan available in your area. Any information we provide is limited
-            to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to
+            I do not offer every plan available in your area. Any information I provide is limited
+            to those plans I do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to
             get information on all of your options. Not connected with or endorsed by the United
             States government or the federal Medicare program.
           </p>

@@ -32,7 +32,7 @@ export function Plans() {
             Understand every type of Medicare plan
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            There&apos;s no one-size-fits-all answer. We&apos;ll help you weigh each option against
+            There&apos;s no one-size-fits-all answer. I&apos;ll help you weigh each option against
             your health needs, budget, and the doctors you love.
           </p>
         </div>

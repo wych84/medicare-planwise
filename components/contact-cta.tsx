@@ -25,8 +25,8 @@ export function ContactCta() {
               Let&apos;s find the plan that fits your life
             </h2>
             <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
-              Share a few details and a licensed advisor will reach out at a time that works for
-              you. No pressure, ever.
+              Share a few details and I&apos;ll personally reach out at a time that works for you.
+              No pressure, ever.
             </p>
 
             <a
@@ -53,7 +53,7 @@ export function ContactCta() {
                   Thank you!
                 </h3>
                 <p className="mt-2 max-w-xs leading-relaxed text-muted-foreground">
-                  An advisor will be in touch within one business day to schedule your free review.
+                  I&apos;ll be in touch within one business day to schedule your free review.
                 </p>
               </div>
             ) : (
@@ -81,7 +81,7 @@ export function ContactCta() {
                   <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
                 </Button>
                 <p className="text-center text-xs leading-relaxed text-muted-foreground">
-                  By submitting, you agree to be contacted by a licensed advisor. We respect your
+                  By submitting, you agree to be contacted by a licensed advisor. I respect your
                   privacy and never sell your information.
                 </p>
               </form>

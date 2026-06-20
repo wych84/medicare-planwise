@@ -2,9 +2,9 @@ import Image from "next/image"
 import { Check } from "lucide-react"
 
 const points = [
-  "We listen first — no scripts, no pressure",
-  "We explain the fine print before you sign",
-  "We're available year-round, not just at enrollment",
+  "I listen first — no scripts, no pressure",
+  "I explain the fine print before you sign",
+  "I'm available year-round, not just at enrollment",
 ]
 
 export function AboutFeature() {
@@ -15,7 +15,7 @@ export function AboutFeature() {
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="/advisor.png"
-              alt="A licensed Medicare PlanWise advisor ready to help"
+              alt="The licensed independent advisor behind Medicare PlanWise, ready to help"
               width={680}
               height={760}
               className="h-full w-full object-cover"
@@ -25,14 +25,14 @@ export function AboutFeature() {
 
         <div>
           <p className="text-sm font-medium uppercase tracking-wider text-primary-foreground/70">
-            Our promise
+            My promise
           </p>
           <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
-            People-first advice, from people who genuinely care
+            People-first advice, from someone who genuinely cares
           </h2>
           <p className="mt-5 max-w-md text-pretty leading-relaxed text-primary-foreground/80">
-            Medicare PlanWise was founded on a simple belief: choosing healthcare coverage should
-            feel supported, not stressful. Our advisors treat every member like family.
+            I founded Medicare PlanWise on a simple belief: choosing healthcare coverage should
+            feel supported, not stressful. I treat every client like family.
           </p>
 
           <ul className="mt-8 space-y-4">
@@ -47,7 +47,7 @@ export function AboutFeature() {
           </ul>
 
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-primary-foreground/15 pt-8">
-            <Stat value="12k+" label="Members guided" />
+            <Stat value="1k+" label="Clients guided" />
             <Stat value="98%" label="Would recommend" />
             <Stat value="15+" label="Years of service" />
           </div>

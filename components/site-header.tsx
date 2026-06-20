@@ -49,7 +49,7 @@ export function SiteHeader() {
             1-800-555-0123
           </a>
           <a href="#contact" className={buttonVariants({ className: "rounded-full" })}>
-            Speak with an advisor
+            Schedule a consultation
           </a>
         </div>
 
@@ -82,7 +82,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className={buttonVariants({ className: "mt-2 w-full rounded-full" })}
             >
-              Speak with an advisor
+              Schedule a consultation
             </a>
           </nav>
         </div>
