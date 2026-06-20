@@ -1,26 +1,12 @@
 import Image from "next/image"
-
-const columns = [
-  {
-    title: "Plans",
-    links: ["Medicare Advantage", "Medicare Supplement", "Prescription Drug Plans", "Dental & Vision"],
-  },
-  {
-    title: "Resources",
-    links: ["Education Center", "Enrollment Periods", "Eligibility Guide", "Glossary"],
-  },
-  {
-    title: "Practice",
-    links: ["About Me", "My Approach", "Testimonials", "Contact"],
-  },
-]
+import { Phone, Mail } from "lucide-react"
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8">
-        <div className="grid gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+        <div className="grid gap-12 md:grid-cols-2">
+          <div>
             <Image
               src="/medicare-planwise-wordmark.png"
               alt="Medicare PlanWise"
@@ -34,23 +20,29 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {columns.map((col) => (
-            <div key={col.title}>
-              <h3 className="text-sm font-semibold text-foreground">{col.title}</h3>
-              <ul className="mt-4 space-y-3">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="md:justify-self-end">
+            <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
+            <ul className="mt-4 space-y-3">
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                <a
+                  href="tel:+17149490664"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  714-949-0664
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                <a
+                  href="mailto:medicareplanwise@gmail.com"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  medicareplanwise@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-14 border-t border-border pt-8">
