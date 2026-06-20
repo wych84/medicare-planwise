@@ -4,7 +4,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { HowItWorks } from "@/components/how-it-works"
 import { Plans } from "@/components/plans"
 import { AboutFeature } from "@/components/about-feature"
-import { Education } from "@/components/education"
 import { Testimonials } from "@/components/testimonials"
 import { Faq } from "@/components/faq"
 import { ContactCta } from "@/components/contact-cta"
@@ -20,7 +19,6 @@ export default function Page() {
         <HowItWorks />
         <Plans />
         <AboutFeature />
-        <Education />
         <Testimonials />
         <Faq />
         <ContactCta />

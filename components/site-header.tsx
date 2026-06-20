@@ -8,7 +8,6 @@ import { buttonVariants } from "@/components/ui/button"
 const links = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Plans", href: "#plans" },
-  { label: "Education", href: "#education" },
   { label: "About", href: "#about" },
 ]
 
