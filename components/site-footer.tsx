@@ -22,11 +22,11 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Image
-              src="/medicare-planwise-logo.png"
+              src="/medicare-planwise-wordmark.png"
               alt="Medicare PlanWise"
               width={680}
               height={340}
-              className="h-16 w-auto mix-blend-multiply"
+              className="h-16 w-auto"
             />
             <p className="mt-4 max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
               Independent, licensed Medicare guidance — personally helping you choose with clarity

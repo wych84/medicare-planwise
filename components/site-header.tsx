@@ -19,12 +19,12 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:h-24 md:px-8">
         <a href="#" className="flex items-center" aria-label="Medicare PlanWise home">
           <Image
-            src="/medicare-planwise-logo.png"
+            src="/medicare-planwise-wordmark.png"
             alt="Medicare PlanWise"
             width={680}
             height={340}
             priority
-            className="h-14 w-auto mix-blend-multiply md:h-16"
+            className="h-14 w-auto md:h-16"
           />
         </a>
 
