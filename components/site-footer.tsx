@@ -54,7 +54,8 @@ export function SiteFooter() {
           </p>
           <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Medicare PlanWise. All rights reserved.
+              &copy; {new Date().getFullYear()} Medicare PlanWise. All rights reserved.{" "}
+              <span className="whitespace-nowrap">CA License #0M47941</span>
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-foreground">
