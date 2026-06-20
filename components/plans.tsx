@@ -1,4 +1,7 @@
-import { ArrowUpRight } from "lucide-react"
+"use client"
+
+import { useRef } from "react"
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const plans = [
   {
@@ -23,12 +26,36 @@ const plans = [
 ]
 
 const ancillary = [
-  "Cancer, heart attack & stroke",
-  "Hospital indemnity",
-  "Dental, vision & hearing",
+  {
+    name: "Cancer, Heart Attack & Stroke",
+    tag: "Critical illness",
+    body: "Lump-sum cash benefits paid directly to you after a covered diagnosis — to help with bills, travel, or anything else.",
+    points: ["Cash paid on diagnosis", "Use the money however you need", "Coverage for all three conditions"],
+  },
+  {
+    name: "Hospital Indemnity",
+    tag: "Hospital",
+    body: "Helps cover the out-of-pocket costs of a hospital stay, like daily copays and admission fees Medicare leaves behind.",
+    points: ["Per-day hospital benefits", "Pairs well with Advantage plans", "Pays you, not the hospital"],
+  },
+  {
+    name: "Dental, Vision & Hearing",
+    tag: "DVH",
+    body: "Standalone coverage for the everyday care Original Medicare typically doesn't include — keeping you healthy head to toe.",
+    points: ["Cleanings, exams & major work", "Eyewear and eye exams", "Hearing aids and tests"],
+  },
 ]
 
 export function Plans() {
+  const trackRef = useRef<HTMLDivElement>(null)
+
+  const scroll = (direction: "prev" | "next") => {
+    const track = trackRef.current
+    if (!track) return
+    const amount = track.clientWidth * 0.8
+    track.scrollBy({ left: direction === "next" ? amount : -amount, behavior: "smooth" })
+  }
+
   return (
     <section id="plans" className="bg-card">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
@@ -104,28 +131,71 @@ export function Plans() {
           ))}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-border bg-background p-8 md:flex md:items-center md:justify-between md:gap-8">
-          <div className="max-w-xl">
-            <p className="text-sm font-medium uppercase tracking-wider text-accent">
-              Ancillary products
-            </p>
-            <h3 className="mt-2 font-serif text-2xl font-semibold text-foreground">
-              Extra protection beyond your Medicare plan
-            </h3>
-            <p className="mt-3 leading-relaxed text-muted-foreground">
-              Round out your coverage with supplemental policies that help with the costs Medicare
-              doesn&apos;t — so an unexpected diagnosis or hospital stay doesn&apos;t derail your
-              budget.
-            </p>
+        <div className="mt-16">
+          <div className="flex items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">
+                Ancillary products
+              </p>
+              <h3 className="mt-3 text-balance font-serif text-2xl font-semibold leading-tight text-foreground md:text-3xl">
+                Extra protection beyond your Medicare plan
+              </h3>
+              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                Round out your coverage with supplemental policies that help with the costs Medicare
+                doesn&apos;t — so an unexpected diagnosis or hospital stay doesn&apos;t derail your
+                budget.
+              </p>
+            </div>
+            <div className="hidden shrink-0 gap-3 md:flex">
+              <button
+                type="button"
+                onClick={() => scroll("prev")}
+                aria-label="Previous products"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
+              >
+                <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scroll("next")}
+                aria-label="Next products"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
+              >
+                <ChevronRight className="h-5 w-5" aria-hidden="true" />
+              </button>
+            </div>
           </div>
-          <ul className="mt-6 grid shrink-0 gap-3 md:mt-0">
+
+          <div
+            ref={trackRef}
+            className="mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
             {ancillary.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-foreground">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-                {item}
-              </li>
+              <article
+                key={item.name}
+                className="flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border border-border bg-background p-8 sm:w-[60%] lg:w-[calc((100%-3rem)/3)]"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+                    {item.tag}
+                  </span>
+                  <ArrowUpRight className="h-5 w-5 text-accent" aria-hidden="true" />
+                </div>
+
+                <h4 className="mt-5 font-serif text-2xl font-semibold text-foreground">{item.name}</h4>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+
+                <ul className="mt-6 space-y-3 border-t border-border pt-6 text-sm">
+                  {item.points.map((point) => (
+                    <li key={point} className="flex items-center gap-3 text-foreground">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>
