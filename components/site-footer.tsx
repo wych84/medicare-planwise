@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Phone, Mail } from "lucide-react"
+import { Phone, Mail, BadgeCheck } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -41,6 +41,10 @@ export function SiteFooter() {
                   medicareplanwise@gmail.com
                 </a>
               </li>
+              <li className="flex items-center gap-3">
+                <BadgeCheck className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                <span className="text-sm text-muted-foreground">CA License #0M47941</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -54,8 +58,7 @@ export function SiteFooter() {
           </p>
           <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Medicare PlanWise. All rights reserved.{" "}
-              <span className="whitespace-nowrap">CA License #0M47941</span>
+              &copy; {new Date().getFullYear()} Medicare PlanWise. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-foreground">
