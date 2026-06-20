@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight, Star } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 
 export function Hero() {
@@ -42,27 +42,6 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 flex items-center gap-4">
-            <div className="flex -space-x-2" aria-hidden="true">
-              {[0, 1, 2, 3].map((i) => (
-                <span
-                  key={i}
-                  className="h-9 w-9 rounded-full border-2 border-background bg-secondary"
-                />
-              ))}
-            </div>
-            <div>
-              <div className="flex items-center gap-0.5 text-accent">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" aria-hidden="true" />
-                ))}
-              </div>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Trusted by <span className="font-semibold text-foreground">1,000+</span> clients
-                nationwide
-              </p>
-            </div>
-          </div>
         </div>
 
         <div className="relative">

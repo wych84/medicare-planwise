@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Check } from "lucide-react"
 
 const points = [
-  "I listen first — no scripts, no pressure",
+  "I walk you through the details — never any pressure",
   "I explain the fine print before you sign",
   "I'm available year-round, not just at enrollment",
 ]
@@ -46,22 +46,8 @@ export function AboutFeature() {
             ))}
           </ul>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-primary-foreground/15 pt-8">
-            <Stat value="1k+" label="Clients guided" />
-            <Stat value="98%" label="Would recommend" />
-            <Stat value="15+" label="Years of service" />
-          </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <p className="font-serif text-3xl font-semibold">{value}</p>
-      <p className="mt-1 text-sm text-primary-foreground/70">{label}</p>
-    </div>
   )
 }
