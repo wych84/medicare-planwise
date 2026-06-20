@@ -32,9 +32,9 @@ export async function sendLead(_prevState: LeadState, formData: FormData): Promi
 
   try {
     const { error } = await resend.emails.send({
-      // Uses Resend's shared onboarding sender. Swap for a verified domain
-      // address (e.g. leads@yourdomain.com) once a domain is set up in Resend.
-      from: "Medicare PlanWise <onboarding@resend.dev>",
+      // Sends from your verified domain. Make sure medicareplanwise.com is
+      // verified in Resend's Domains section (add the DNS records they provide).
+      from: "Medicare PlanWise <leads@medicareplanwise.com>",
       to: [TO_EMAIL],
       replyTo: email,
       subject: `New Medicare review request from ${firstName} ${lastName}`,
