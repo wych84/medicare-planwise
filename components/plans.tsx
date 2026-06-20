@@ -1,4 +1,7 @@
-import { ArrowUpRight } from "lucide-react"
+"use client"
+
+import { useRef } from "react"
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const plans = [
   {
@@ -29,25 +32,57 @@ const plans = [
 ]
 
 export function Plans() {
+  const trackRef = useRef<HTMLDivElement>(null)
+
+  const scroll = (direction: "prev" | "next") => {
+    const track = trackRef.current
+    if (!track) return
+    const amount = track.clientWidth * 0.8
+    track.scrollBy({ left: direction === "next" ? amount : -amount, behavior: "smooth" })
+  }
+
   return (
     <section id="plans" className="bg-card">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-        <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent">Coverage options</p>
-          <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-            Understand every type of Medicare plan
-          </h2>
-          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            There&apos;s no one-size-fits-all answer. I&apos;ll help you weigh each option against
-            your health needs, budget, and the doctors you love.
-          </p>
+        <div className="flex items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">Coverage options</p>
+            <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+              Understand every type of Medicare plan
+            </h2>
+            <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+              There&apos;s no one-size-fits-all answer. I&apos;ll help you weigh each option against
+              your health needs, budget, and the doctors you love.
+            </p>
+          </div>
+          <div className="hidden shrink-0 gap-3 md:flex">
+            <button
+              type="button"
+              onClick={() => scroll("prev")}
+              aria-label="Previous plans"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
+            >
+              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll("next")}
+              aria-label="Next plans"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
+            >
+              <ChevronRight className="h-5 w-5" aria-hidden="true" />
+            </button>
+          </div>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          ref={trackRef}
+          className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className={`flex flex-col rounded-2xl border p-8 ${
+              className={`flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border p-8 sm:w-[60%] lg:w-[calc((100%-3rem)/3)] ${
                 plan.featured
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border bg-background"
