@@ -1,17 +1,16 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
-import { Phone, ArrowRight, Check } from "lucide-react"
+import { useActionState } from "react"
+import { useFormStatus } from "react-dom"
+import { Phone, ArrowRight, Check, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { sendLead, type LeadState } from "@/app/actions/send-lead"
+
+const initialState: LeadState = { status: "idle" }
 
 export function ContactCta() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const [state, formAction] = useActionState(sendLead, initialState)
+  const submitted = state.status === "success"
 
   return (
     <section id="contact" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
@@ -57,7 +56,7 @@ export function ContactCta() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form action={formAction} className="flex flex-col gap-4">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="First name" name="firstName" autoComplete="given-name" />
                   <Field label="Last name" name="lastName" autoComplete="family-name" />
@@ -76,10 +75,12 @@ export function ContactCta() {
                     className="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30"
                   />
                 </div>
-                <Button type="submit" size="lg" className="mt-2 w-full rounded-full">
-                  Request my free review
-                  <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
-                </Button>
+                <SubmitButton />
+                {state.status === "error" && state.message ? (
+                  <p className="text-center text-sm text-destructive" role="alert">
+                    {state.message}
+                  </p>
+                ) : null}
                 <p className="text-center text-xs leading-relaxed text-muted-foreground">
                   By submitting, you agree to be contacted by a licensed advisor. I respect your
                   privacy and never sell your information.
@@ -90,6 +91,25 @@ export function ContactCta() {
         </div>
       </div>
     </section>
+  )
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus()
+  return (
+    <Button type="submit" size="lg" disabled={pending} className="mt-2 w-full rounded-full">
+      {pending ? (
+        <>
+          <Loader2 className="mr-1 h-4 w-4 animate-spin" aria-hidden="true" />
+          Sending...
+        </>
+      ) : (
+        <>
+          Request my free review
+          <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
+        </>
+      )}
+    </Button>
   )
 }
 
