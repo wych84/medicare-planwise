@@ -13,13 +13,13 @@ export function Hero() {
           </span>
 
           <h1 className="text-balance font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Clarity and confidence for every step of your Medicare journey
+            Helping you choose Medicare with clarity and confidence
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Navigating Medicare can feel overwhelming. As an independent, licensed advisor, I guide
-            you one-on-one through your options with patience and honesty — so you choose a plan that
-            truly fits your life.
+            Navigating Medicare can feel overwhelming. As an independent, licensed advisor, I provide
+            one-on-one guidance with patience and honesty, helping you understand your options and
+            choose coverage with confidence.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
