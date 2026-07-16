@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare PlanWise — Independent Medicare Guidance</title>
+    <meta
+      name="description"
+      content="Medicare PlanWise is an independent advisory practice helping you understand your options and choose the right Medicare plan with unbiased, personalized one-on-one guidance."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              serif: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              background: "var(--background)",
+              foreground: "var(--foreground)",
+              card: "var(--card)",
+              "card-foreground": "var(--card-foreground)",
+              primary: "var(--primary)",
+              "primary-foreground": "var(--primary-foreground)",
+              secondary: "var(--secondary)",
+              "secondary-foreground": "var(--secondary-foreground)",
+              muted: "var(--muted)",
+              "muted-foreground": "var(--muted-foreground)",
+              accent: "var(--accent)",
+              "accent-foreground": "var(--accent-foreground)",
+              destructive: "var(--destructive)",
+              border: "var(--border)",
+              input: "var(--input)",
+              ring: "var(--ring)",
+            },
+            borderRadius: {
+              lg: "0.5rem",
+              xl: "0.7rem",
+              "2xl": "0.9rem",
+              "3xl": "1.1rem",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      :root {
+        color-scheme: light;
+        --background: oklch(0.985 0.005 95);
+        --foreground: oklch(0.26 0.045 245);
+        --card: oklch(1 0 0);
+        --card-foreground: oklch(0.26 0.045 245);
+        --primary: oklch(0.3 0.06 250);
+        --primary-foreground: oklch(0.98 0.005 95);
+        --secondary: oklch(0.95 0.02 200);
+        --secondary-foreground: oklch(0.3 0.06 250);
+        --muted: oklch(0.955 0.008 95);
+        --muted-foreground: oklch(0.5 0.03 240);
+        --accent: oklch(0.62 0.09 195);
+        --accent-foreground: oklch(0.99 0.005 95);
+        --destructive: oklch(0.577 0.245 27.325);
+        --border: oklch(0.9 0.012 230);
+        --input: oklch(0.9 0.012 230);
+        --ring: oklch(0.62 0.09 195);
+      }
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: "Poppins", sans-serif;
+      }
+      .no-scrollbar {
+        scrollbar-width: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:h-24 md:px-8"
+      >
+        <a href="#" class="flex items-center" aria-label="Medicare PlanWise home">
+          <img
+            src="./medicare-planwise-wordmark.png"
+            alt="Medicare PlanWise"
+            class="h-14 w-auto md:h-16"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-9 md:flex" aria-label="Primary">
+          <a href="#how-it-works" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
+          <a href="#plans" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Plans</a>
+          <a href="#about" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">About</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 md:flex">
+          <a href="tel:+17149490664" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">714-949-0664</a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
+            Schedule a consultation
+          </a>
+        </div>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground md:hidden"
+          aria-label="Open menu"
+        >
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-border/60 bg-background md:hidden">
+        <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4" aria-label="Mobile">
+          <a href="#how-it-works" class="rounded-md px-2 py-3 text-base font-medium text-foreground hover:bg-muted">How It Works</a>
+          <a href="#plans" class="rounded-md px-2 py-3 text-base font-medium text-foreground hover:bg-muted">Plans</a>
+          <a href="#about" class="rounded-md px-2 py-3 text-base font-medium text-foreground hover:bg-muted">About</a>
+          <a href="#contact" class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground">Schedule a consultation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-2 lg:gap-16 lg:py-28">
+          <div class="flex flex-col">
+            <span class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-accent">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+              Independent &amp; unbiased guidance
+            </span>
+            <h1 class="text-balance font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              Helping you choose Medicare with clarity and confidence
+            </h1>
+            <p class="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+              Navigating Medicare can feel overwhelming. As an independent, licensed advisor, I provide
+              one-on-one guidance with patience and honesty, helping you understand your options and
+              choose coverage with confidence.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" class="inline-flex items-center justify-center gap-1 rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90">
+                Get your free plan review
+                <i data-lucide="arrow-right" class="ml-1 h-4 w-4"></i>
+              </a>
+              <a href="#how-it-works" class="inline-flex items-center justify-center rounded-full border border-border bg-transparent px-6 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted">
+                See how it works
+              </a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-2xl border border-border shadow-sm">
+              <img
+                src="./hero-couple.png"
+                alt="A retired couple reviewing their Medicare options with their trusted independent advisor"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust bar -->
+      <section class="border-y border-border bg-card" aria-label="Why clients trust me">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-px overflow-hidden px-5 py-4 sm:grid-cols-2 md:px-8 lg:grid-cols-4">
+          <div class="flex gap-4 px-2 py-6 lg:px-6">
+            <i data-lucide="scale" class="h-6 w-6 shrink-0 text-accent"></i>
+            <div>
+              <h3 class="text-sm font-semibold text-foreground">Unbiased by design</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">I compare plans across all major carriers — never steering you toward one company's products.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 px-2 py-6 lg:px-6">
+            <i data-lucide="hand-heart" class="h-6 w-6 shrink-0 text-accent"></i>
+            <div>
+              <h3 class="text-sm font-semibold text-foreground">Guidance, not sales</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">Patient, jargon-free conversations that put your health and budget first, every time.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 px-2 py-6 lg:px-6">
+            <i data-lucide="shield-check" class="h-6 w-6 shrink-0 text-accent"></i>
+            <div>
+              <h3 class="text-sm font-semibold text-foreground">Licensed &amp; certified</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">State-licensed and recertified annually on the latest Medicare rules.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 px-2 py-6 lg:px-6">
+            <i data-lucide="clock" class="h-6 w-6 shrink-0 text-accent"></i>
+            <div>
+              <h3 class="text-sm font-semibold text-foreground">Support that lasts</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">I'm here long after enrollment — for claims questions, annual reviews, and plan changes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how-it-works" class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div class="max-w-2xl">
+          <p class="text-sm font-medium uppercase tracking-wider text-accent">How it works</p>
+          <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+            A guided path, made simple
+          </h2>
+          <p class="mt-4 text-pretty leading-relaxed text-muted-foreground">
+            Three thoughtful steps replace hours of confusion. You stay in control the entire way.
+          </p>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
+          <div class="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-sm">
+            <span class="font-serif text-5xl font-semibold text-accent/30">01</span>
+            <h3 class="mt-6 font-serif text-xl font-semibold text-foreground">Tell me about you</h3>
+            <p class="mt-3 leading-relaxed text-muted-foreground">Share your doctors, prescriptions, and priorities in a relaxed, no-pressure conversation — by phone or video.</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-sm">
+            <span class="font-serif text-5xl font-semibold text-accent/30">02</span>
+            <h3 class="mt-6 font-serif text-xl font-semibold text-foreground">I compare your options</h3>
+            <p class="mt-3 leading-relaxed text-muted-foreground">I analyze plans from every major carrier and explain the trade-offs in plain language.</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-sm">
+            <span class="font-serif text-5xl font-semibold text-accent/30">03</span>
+            <h3 class="mt-6 font-serif text-xl font-semibold text-foreground">Enroll with confidence</h3>
+            <p class="mt-3 leading-relaxed text-muted-foreground">Once you're ready, I handle the paperwork and stay by your side through enrollment and beyond.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Plans -->
+      <section id="plans" class="bg-card">
+        <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+          <div class="max-w-2xl">
+            <p class="text-sm font-medium uppercase tracking-wider text-accent">Coverage options</p>
+            <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+              Understand every type of Medicare plan
+            </h2>
+            <p class="mt-4 text-pretty leading-relaxed text-muted-foreground">
+              There's no one-size-fits-all answer. I'll help you weigh each option against your health needs, budget, and the doctors you love.
+            </p>
+          </div>
+
+          <div class="no-scrollbar mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+            <!-- Card 1 -->
+            <article class="flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border border-border bg-background p-8 sm:w-[60%] lg:w-[calc((100%-3rem)/3)]">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">Part C</span>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-accent"></i>
+              </div>
+              <h3 class="mt-5 font-serif text-2xl font-semibold text-foreground">Medicare Advantage</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">All-in-one coverage that often bundles medical, hospital, and prescription drugs — sometimes with extras like dental and vision.</p>
+              <ul class="mt-6 space-y-3 border-t border-border pt-6 text-sm">
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Bundled benefits</li>
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Often $0 premium options</li>
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Network-based care</li>
+              </ul>
+            </article>
+            <!-- Card 2 (featured) -->
+            <article class="flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border border-primary bg-primary p-8 text-primary-foreground sm:w-[60%] lg:w-[calc((100%-3rem)/3)]">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-medium text-primary-foreground">Medigap</span>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-primary-foreground/70"></i>
+              </div>
+              <h3 class="mt-5 font-serif text-2xl font-semibold">Medicare Supplement</h3>
+              <p class="mt-3 leading-relaxed text-primary-foreground/80">Pairs with Original Medicare to help cover out-of-pocket costs like copays, coinsurance, and deductibles.</p>
+              <ul class="mt-6 space-y-3 border-t border-primary-foreground/20 pt-6 text-sm">
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>See any doctor that accepts Medicare</li>
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>Predictable costs</li>
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>No referrals needed</li>
+              </ul>
+            </article>
+            <!-- Card 3 -->
+            <article class="flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border border-border bg-background p-8 sm:w-[60%] lg:w-[calc((100%-3rem)/3)]">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">Part D</span>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-accent"></i>
+              </div>
+              <h3 class="mt-5 font-serif text-2xl font-semibold text-foreground">Prescription Drug Plans</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">Stand-alone coverage that helps lower the cost of the medications you take — matched to your specific prescriptions.</p>
+              <ul class="mt-6 space-y-3 border-t border-border pt-6 text-sm">
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Personalized drug review</li>
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Pharmacy comparisons</li>
+                <li class="flex items-center gap-3 text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Annual cost checkups</li>
+              </ul>
+            </article>
+            <!-- Card 4 (featured) -->
+            <article class="flex w-[85%] shrink-0 snap-start flex-col rounded-2xl border border-primary bg-primary p-8 text-primary-foreground sm:w-[60%] lg:w-[calc((100%-3rem)/3)]">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-medium text-primary-foreground">Supplemental</span>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-primary-foreground/70"></i>
+              </div>
+              <h3 class="mt-5 font-serif text-2xl font-semibold">Ancillary Products</h3>
+              <p class="mt-3 leading-relaxed text-primary-foreground/80">Round out your coverage with policies that help with the costs Medicare doesn't — so an unexpected diagnosis or hospital stay doesn't derail your budget.</p>
+              <ul class="mt-6 space-y-3 border-t border-primary-foreground/20 pt-6 text-sm">
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>Cancer, heart attack &amp; stroke</li>
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>Hospital indemnity</li>
+                <li class="flex items-center gap-3 text-primary-foreground/90"><span class="h-1.5 w-1.5 rounded-full bg-primary-foreground"></span>Dental, vision &amp; hearing</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / My promise -->
+      <section id="about" class="bg-primary text-primary-foreground">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-16">
+          <div class="relative order-last lg:order-first">
+            <div class="overflow-hidden rounded-2xl">
+              <img src="./advisor.png" alt="The licensed independent advisor behind Medicare PlanWise, ready to help" class="h-full w-full object-cover" />
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-medium uppercase tracking-wider text-primary-foreground/70">My promise</p>
+            <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+              People-first advice, from someone who genuinely cares
+            </h2>
+            <p class="mt-5 max-w-md text-pretty leading-relaxed text-primary-foreground/80">
+              I founded Medicare PlanWise on a simple belief: choosing healthcare coverage should feel supported, not stressful. I treat every client like family.
+            </p>
+            <ul class="mt-8 space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground"><i data-lucide="check" class="h-4 w-4"></i></span>
+                <span class="leading-relaxed text-primary-foreground/90">I walk you through the details — never any pressure</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground"><i data-lucide="check" class="h-4 w-4"></i></span>
+                <span class="leading-relaxed text-primary-foreground/90">I explain the fine print before you sign</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground"><i data-lucide="check" class="h-4 w-4"></i></span>
+                <span class="leading-relaxed text-primary-foreground/90">I'm available year-round, not just at enrollment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="bg-secondary/40">
+        <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+          <div class="max-w-2xl">
+            <p class="text-sm font-medium uppercase tracking-wider text-accent">Client stories</p>
+            <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+              Real people, real peace of mind
+            </h2>
+          </div>
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <figure class="flex flex-col rounded-2xl border border-border bg-card p-8">
+              <div class="flex items-center gap-0.5 text-accent">
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              </div>
+              <blockquote class="mt-5 flex-1 text-pretty leading-relaxed text-foreground">&ldquo;I was completely lost until I called. My advisor walked me through everything slowly and never made me feel rushed. I finally understand my coverage.&rdquo;</blockquote>
+              <figcaption class="mt-6 border-t border-border pt-5">
+                <p class="font-semibold text-foreground">Margaret R.</p>
+                <p class="mt-0.5 text-sm text-muted-foreground">Enrolled in Medigap, Ohio</p>
+              </figcaption>
+            </figure>
+            <figure class="flex flex-col rounded-2xl border border-border bg-card p-8">
+              <div class="flex items-center gap-0.5 text-accent">
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              </div>
+              <blockquote class="mt-5 flex-1 text-pretty leading-relaxed text-foreground">&ldquo;My advisor found a plan that kept both my doctors and saved me almost $90 a month. Honest, kind, and genuinely on my side.&rdquo;</blockquote>
+              <figcaption class="mt-6 border-t border-border pt-5">
+                <p class="font-semibold text-foreground">James T.</p>
+                <p class="mt-0.5 text-sm text-muted-foreground">Medicare Advantage, Arizona</p>
+              </figcaption>
+            </figure>
+            <figure class="flex flex-col rounded-2xl border border-border bg-card p-8">
+              <div class="flex items-center gap-0.5 text-accent">
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              </div>
+              <blockquote class="mt-5 flex-1 text-pretty leading-relaxed text-foreground">&ldquo;What I appreciated most was the personal check-ins after I enrolled. It's rare to feel this cared for these days.&rdquo;</blockquote>
+              <figcaption class="mt-6 border-t border-border pt-5">
+                <p class="font-semibold text-foreground">Dorothy &amp; Bill K.</p>
+                <p class="mt-0.5 text-sm text-muted-foreground">Part D review, Florida</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mx-auto max-w-3xl px-5 py-20 md:px-8 md:py-28">
+        <div class="text-center">
+          <p class="text-sm font-medium uppercase tracking-wider text-accent">Questions</p>
+          <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+            Answers to what members ask most
+          </h2>
+        </div>
+        <div class="mt-12 divide-y divide-border border-y border-border">
+          <details class="group" open>
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 py-5 text-left">
+              <span class="font-serif text-lg font-medium text-foreground">Does it cost anything to work with Medicare PlanWise?</span>
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-accent"><i data-lucide="plus" class="h-4 w-4 group-open:hidden"></i><i data-lucide="minus" class="hidden h-4 w-4 group-open:block"></i></span>
+            </summary>
+            <p class="-mt-1 pb-6 pr-12 leading-relaxed text-muted-foreground">No. My services are completely free to you. I'm compensated by the insurance carriers when you enroll, and that compensation is the same regardless of which plan you choose — so my advice stays unbiased.</p>
+          </details>
+          <details class="group">
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 py-5 text-left">
+              <span class="font-serif text-lg font-medium text-foreground">Are you connected to one specific insurance company?</span>
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-accent"><i data-lucide="plus" class="h-4 w-4 group-open:hidden"></i><i data-lucide="minus" class="hidden h-4 w-4 group-open:block"></i></span>
+            </summary>
+            <p class="-mt-1 pb-6 pr-12 leading-relaxed text-muted-foreground">No. Medicare PlanWise is an independent advisory practice, and I work with all major national and regional carriers. That independence lets me recommend what's genuinely best for you, not what's best for a single company.</p>
+          </details>
+          <details class="group">
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 py-5 text-left">
+              <span class="font-serif text-lg font-medium text-foreground">When can I make changes to my Medicare plan?</span>
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-accent"><i data-lucide="plus" class="h-4 w-4 group-open:hidden"></i><i data-lucide="minus" class="hidden h-4 w-4 group-open:block"></i></span>
+            </summary>
+            <p class="-mt-1 pb-6 pr-12 leading-relaxed text-muted-foreground">Most people can make changes during the Annual Enrollment Period (October 15 – December 7), as well as during certain special enrollment periods. I'll help you understand which windows apply to you.</p>
+          </details>
+          <details class="group">
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 py-5 text-left">
+              <span class="font-serif text-lg font-medium text-foreground">What should I have ready for my consultation?</span>
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-accent"><i data-lucide="plus" class="h-4 w-4 group-open:hidden"></i><i data-lucide="minus" class="hidden h-4 w-4 group-open:block"></i></span>
+            </summary>
+            <p class="-mt-1 pb-6 pr-12 leading-relaxed text-muted-foreground">It helps to have a list of your current doctors, your prescriptions and dosages, and your Medicare card if you already have one. Don't worry if you're missing something — I'll guide you through it.</p>
+          </details>
+          <details class="group">
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 py-5 text-left">
+              <span class="font-serif text-lg font-medium text-foreground">Who will I be working with?</span>
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-accent"><i data-lucide="plus" class="h-4 w-4 group-open:hidden"></i><i data-lucide="minus" class="hidden h-4 w-4 group-open:block"></i></span>
+            </summary>
+            <p class="-mt-1 pb-6 pr-12 leading-relaxed text-muted-foreground">You'll work directly with me from start to finish. I know your situation personally and am available year-round for questions, claims help, and annual plan reviews.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div class="overflow-hidden rounded-3xl border border-border bg-card">
+          <div class="grid lg:grid-cols-2">
+            <div class="flex flex-col justify-center p-8 md:p-12 lg:p-14">
+              <p class="text-sm font-medium uppercase tracking-wider text-accent">Free, no-obligation review</p>
+              <h2 class="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+                Let's find the plan that fits your life
+              </h2>
+              <p class="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
+                Share a few details and I'll personally reach out at a time that works for you. No pressure, ever.
+              </p>
+              <a href="tel:+17149490664" class="mt-8 inline-flex items-center gap-3 text-foreground">
+                <span class="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-accent"><i data-lucide="phone" class="h-5 w-5"></i></span>
+                <span>
+                  <span class="block text-sm text-muted-foreground">Prefer to talk now?</span>
+                  <span class="font-serif text-xl font-semibold">714-949-0664</span>
+                </span>
+              </a>
+            </div>
+            <div class="border-t border-border bg-secondary/30 p-8 md:p-12 lg:border-l lg:border-t-0 lg:p-14">
+              <form class="flex flex-col gap-4" action="mailto:medicareplanwise@gmail.com" method="post" enctype="text/plain">
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="flex flex-col gap-2">
+                    <label for="firstName" class="text-sm font-medium text-foreground">First name</label>
+                    <input id="firstName" name="firstName" required class="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30" />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="lastName" class="text-sm font-medium text-foreground">Last name</label>
+                    <input id="lastName" name="lastName" required class="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30" />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="phone" class="text-sm font-medium text-foreground">Phone number</label>
+                  <input id="phone" name="phone" type="tel" required class="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="email" class="text-sm font-medium text-foreground">Email</label>
+                  <input id="email" name="email" type="email" required class="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="zip" class="text-sm font-medium text-foreground">ZIP code</label>
+                  <input id="zip" name="zip" inputmode="numeric" required class="h-11 rounded-md border border-input bg-background px-3.5 text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/30" />
+                </div>
+                <button type="submit" class="mt-2 inline-flex w-full items-center justify-center gap-1 rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90">
+                  Request my free review
+                  <i data-lucide="arrow-right" class="ml-1 h-4 w-4"></i>
+                </button>
+                <p class="text-center text-xs leading-relaxed text-muted-foreground">
+                  By submitting, you agree to be contacted by a licensed advisor. I respect your privacy and never sell your information.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-card">
+      <div class="mx-auto max-w-7xl px-5 py-16 md:px-8">
+        <div class="grid gap-12 md:grid-cols-2">
+          <div>
+            <img src="./medicare-planwise-wordmark.png" alt="Medicare PlanWise" class="h-16 w-auto" />
+            <p class="mt-4 max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
+              Independent, licensed Medicare guidance — personally helping you choose with clarity and confidence.
+            </p>
+          </div>
+          <div class="md:justify-self-end">
+            <h3 class="text-sm font-semibold text-foreground">Get in touch</h3>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-center gap-3">
+                <i data-lucide="phone" class="h-4 w-4 shrink-0 text-accent"></i>
+                <a href="tel:+17149490664" class="text-sm text-muted-foreground transition-colors hover:text-foreground">714-949-0664</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="mail" class="h-4 w-4 shrink-0 text-accent"></i>
+                <a href="mailto:medicareplanwise@gmail.com" class="text-sm text-muted-foreground transition-colors hover:text-foreground">medicareplanwise@gmail.com</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="badge-check" class="h-4 w-4 shrink-0 text-accent"></i>
+                <span class="text-sm text-muted-foreground">CA License #0M47941</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-14 border-t border-border pt-8">
+          <p class="text-xs leading-relaxed text-muted-foreground">
+            I do not offer every plan available in your area. Any information I provide is limited to those plans I do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options. Not connected with or endorsed by the United States government or the federal Medicare program.
+          </p>
+          <div class="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+            <p class="text-sm text-muted-foreground">&copy; <span id="year"></span> Medicare PlanWise. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a href="#" class="text-sm text-muted-foreground hover:text-foreground">Privacy</a>
+              <a href="#" class="text-sm text-muted-foreground hover:text-foreground">Terms</a>
+              <a href="#" class="text-sm text-muted-foreground hover:text-foreground">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => menu.classList.toggle("hidden"));
+      // Current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+      // Render icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
