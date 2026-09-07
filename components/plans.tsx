@@ -6,28 +6,32 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 const plans = [
   {
     name: "Medicare Advantage",
-    tag: "Part C",
-    body: "All-in-one coverage that often bundles medical, hospital, and prescription drugs — sometimes with extras like dental and vision.",
-    points: ["Bundled benefits", "Often $0 premium options", "Network-based care"],
+    tag: "Parte C",
+    body: "Cobertura todo en uno que a menudo combina servicios médicos, hospitalarios y de medicamentos recetados — a veces con extras como dental y visión.",
+    points: ["Beneficios combinados", "A menudo opciones con prima de $0", "Atención basada en red"],
   },
   {
-    name: "Medicare Supplement",
+    name: "Suplemento de Medicare",
     tag: "Medigap",
-    body: "Pairs with Original Medicare to help cover out-of-pocket costs like copays, coinsurance, and deductibles.",
-    points: ["See any doctor that accepts Medicare", "Predictable costs", "No referrals needed"],
+    body: "Se combina con Medicare Original para ayudar a cubrir costos de bolsillo como copagos, coseguros y deducibles.",
+    points: [
+      "Consulte a cualquier médico que acepte Medicare",
+      "Costos predecibles",
+      "Sin necesidad de referencias",
+    ],
     featured: true,
   },
   {
-    name: "Prescription Drug Plans",
-    tag: "Part D",
-    body: "Stand-alone coverage that helps lower the cost of the medications you take — matched to your specific prescriptions.",
-    points: ["Personalized drug review", "Pharmacy comparisons", "Annual cost checkups"],
+    name: "Planes de medicamentos recetados",
+    tag: "Parte D",
+    body: "Cobertura independiente que ayuda a reducir el costo de los medicamentos que toma — ajustada a sus recetas específicas.",
+    points: ["Revisión personalizada de medicamentos", "Comparaciones de farmacias", "Revisiones anuales de costos"],
   },
   {
-    name: "Ancillary Products",
-    tag: "Supplemental",
-    body: "Round out your coverage with policies that help with the costs Medicare doesn't — so an unexpected diagnosis or hospital stay doesn't derail your budget.",
-    points: ["Cancer, heart attack & stroke", "Hospital indemnity", "Dental, vision & hearing"],
+    name: "Productos complementarios",
+    tag: "Suplementario",
+    body: "Complete su cobertura con pólizas que ayudan con los costos que Medicare no cubre — para que un diagnóstico inesperado o una hospitalización no desestabilicen su presupuesto.",
+    points: ["Cáncer, ataque cardíaco y derrame", "Indemnización hospitalaria", "Dental, visión y audición"],
     featured: true,
   },
 ]
@@ -47,20 +51,20 @@ export function Plans() {
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="flex items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-wider text-accent">Coverage options</p>
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">Opciones de cobertura</p>
             <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-              Understand every type of Medicare plan
+              Entienda cada tipo de plan de Medicare
             </h2>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              There&apos;s no one-size-fits-all answer. I&apos;ll help you weigh each option against
-              your health needs, budget, and the doctors you love.
+              No existe una respuesta única para todos. Le ayudaré a evaluar cada opción según sus
+              necesidades de salud, su presupuesto y los médicos que aprecia.
             </p>
           </div>
           <div className="hidden shrink-0 gap-3 md:flex">
             <button
               type="button"
               onClick={() => scroll("prev")}
-              aria-label="Previous plans"
+              aria-label="Planes anteriores"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
@@ -68,7 +72,7 @@ export function Plans() {
             <button
               type="button"
               onClick={() => scroll("next")}
-              aria-label="Next plans"
+              aria-label="Planes siguientes"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-secondary"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />

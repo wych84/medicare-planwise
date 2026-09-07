@@ -1,14 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
+import { Logo } from "@/components/logo"
 
 const links = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Plans", href: "#plans" },
-  { label: "About", href: "#about" },
+  { label: "Cómo funciona", href: "#how-it-works" },
+  { label: "Planes", href: "#plans" },
+  { label: "Nosotros", href: "#about" },
 ]
 
 export function SiteHeader() {
@@ -17,15 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:h-24 md:px-8">
-        <a href="#" className="flex items-center" aria-label="Medicare PlanWise home">
-          <Image
-            src="/medicare-planwise-wordmark.png"
-            alt="Medicare PlanWise"
-            width={680}
-            height={340}
-            priority
-            className="h-14 w-auto md:h-16"
-          />
+        <a href="#" className="flex items-center" aria-label="Inicio de Confianza Insurance Services">
+          <Logo size="text-2xl md:text-3xl" />
         </a>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
@@ -42,13 +35,13 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:18005550123"
+            href="tel:+17147698445"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            1-800-555-0123
+            714-769-8445
           </a>
           <a href="#contact" className={buttonVariants({ className: "rounded-full" })}>
-            Schedule a consultation
+            Agende una consulta
           </a>
         </div>
 
@@ -81,7 +74,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className={buttonVariants({ className: "mt-2 w-full rounded-full" })}
             >
-              Schedule a consultation
+              Agende una consulta
             </a>
           </nav>
         </div>

@@ -5,24 +5,24 @@ import { Plus, Minus } from "lucide-react"
 
 const faqs = [
   {
-    q: "Does it cost anything to work with Medicare PlanWise?",
-    a: "No. My services are completely free to you. I'm compensated by the insurance carriers when you enroll, and that compensation is the same regardless of which plan you choose — so my advice stays unbiased.",
+    q: "¿Tiene algún costo trabajar con Confianza Insurance Services?",
+    a: "No. Mis servicios son completamente gratuitos para usted. Las aseguradoras me compensan cuando usted se inscribe, y esa compensación es la misma sin importar qué plan elija — por eso mi asesoría se mantiene imparcial.",
   },
   {
-    q: "Are you connected to one specific insurance company?",
-    a: "No. Medicare PlanWise is an independent advisory practice, and I work with all major national and regional carriers. That independence lets me recommend what's genuinely best for you, not what's best for a single company.",
+    q: "¿Está afiliada a una compañía de seguros específica?",
+    a: "No. Confianza Insurance Services es una práctica de asesoría independiente, y trabajo con todas las principales aseguradoras nacionales y regionales. Esa independencia me permite recomendar lo que realmente es mejor para usted, no lo que es mejor para una sola compañía.",
   },
   {
-    q: "When can I make changes to my Medicare plan?",
-    a: "Most people can make changes during the Annual Enrollment Period (October 15 – December 7), as well as during certain special enrollment periods. I'll help you understand which windows apply to you.",
+    q: "¿Cuándo puedo hacer cambios a mi plan de Medicare?",
+    a: "La mayoría de las personas pueden hacer cambios durante el Período Anual de Inscripción (del 15 de octubre al 7 de diciembre), así como durante ciertos períodos de inscripción especial. Le ayudaré a entender qué períodos aplican a su caso.",
   },
   {
-    q: "What should I have ready for my consultation?",
-    a: "It helps to have a list of your current doctors, your prescriptions and dosages, and your Medicare card if you already have one. Don't worry if you're missing something — I'll guide you through it.",
+    q: "¿Qué debo tener listo para mi consulta?",
+    a: "Ayuda tener una lista de sus médicos actuales, sus medicamentos y dosis, y su tarjeta de Medicare si ya la tiene. No se preocupe si le falta algo — yo lo guiaré durante el proceso.",
   },
   {
-    q: "Who will I be working with?",
-    a: "You'll work directly with me from start to finish. I know your situation personally and am available year-round for questions, claims help, and annual plan reviews.",
+    q: "¿Con quién estaré trabajando?",
+    a: "Trabajará directamente conmigo de principio a fin. Conozco su situación personalmente y estoy disponible todo el año para preguntas, ayuda con reclamos y revisiones anuales de su plan.",
   },
 ]
 
@@ -32,9 +32,9 @@ export function Faq() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-20 md:px-8 md:py-28">
       <div className="text-center">
-        <p className="text-sm font-medium uppercase tracking-wider text-accent">Questions</p>
+        <p className="text-sm font-medium uppercase tracking-wider text-accent">Preguntas</p>
         <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-          Answers to what members ask most
+          Respuestas a lo que más preguntan los clientes
         </h2>
       </div>
 

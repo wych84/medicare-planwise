@@ -1,18 +1,18 @@
 const steps = [
   {
     n: "01",
-    title: "Tell me about you",
-    body: "Share your doctors, prescriptions, and priorities in a relaxed, no-pressure conversation — by phone or video.",
+    title: "Cuénteme sobre usted",
+    body: "Comparta sus médicos, medicamentos y prioridades en una conversación relajada y sin presión — por teléfono o video.",
   },
   {
     n: "02",
-    title: "I compare your options",
-    body: "I analyze plans from every major carrier and explain the trade-offs in plain language.",
+    title: "Comparo sus opciones",
+    body: "Analizo planes de todas las principales aseguradoras y le explico las ventajas y desventajas en lenguaje sencillo.",
   },
   {
     n: "03",
-    title: "Enroll with confidence",
-    body: "Once you're ready, I handle the paperwork and stay by your side through enrollment and beyond.",
+    title: "Inscríbase con confianza",
+    body: "Cuando esté listo, me encargo del papeleo y permanezco a su lado durante la inscripción y más allá.",
   },
 ]
 
@@ -20,12 +20,13 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
       <div className="max-w-2xl">
-        <p className="text-sm font-medium uppercase tracking-wider text-accent">How it works</p>
+        <p className="text-sm font-medium uppercase tracking-wider text-accent">Cómo funciona</p>
         <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-          A guided path, made simple
+          Un camino guiado, hecho simple
         </h2>
         <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-          Three thoughtful steps replace hours of confusion. You stay in control the entire way.
+          Tres pasos bien pensados reemplazan horas de confusión. Usted mantiene el control en todo
+          momento.
         </p>
       </div>
 
