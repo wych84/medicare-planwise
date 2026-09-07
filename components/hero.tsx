@@ -9,17 +9,17 @@ export function Hero() {
         <div className="flex flex-col">
           <span className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-accent">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-            Independent &amp; unbiased guidance
+            Asesoría independiente e imparcial
           </span>
 
           <h1 className="text-balance font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Helping you choose Medicare with clarity and confidence
+            Le ayudo a elegir Medicare con claridad y confianza
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Navigating Medicare can feel overwhelming. As an independent, licensed advisor, I provide
-            one-on-one guidance with patience and honesty, helping you understand your options and
-            choose coverage with confidence.
+            Navegar Medicare puede resultar abrumador. Como asesora independiente y con licencia, le
+            brindo orientación personalizada con paciencia y honestidad, ayudándole a entender sus
+            opciones y a elegir su cobertura con confianza.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -27,7 +27,7 @@ export function Hero() {
               href="#contact"
               className={buttonVariants({ size: "lg", className: "rounded-full" })}
             >
-              Get your free plan review
+              Reciba su revisión de plan gratis
               <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
             </a>
             <a
@@ -38,7 +38,7 @@ export function Hero() {
                 className: "rounded-full bg-transparent",
               })}
             >
-              See how it works
+              Vea cómo funciona
             </a>
           </div>
 
@@ -48,7 +48,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-2xl border border-border shadow-sm">
             <Image
               src="/hero-couple.png"
-              alt="A retired couple reviewing their Medicare options with their trusted independent advisor"
+              alt="Una pareja jubilada revisando sus opciones de Medicare con su asesora independiente de confianza"
               width={720}
               height={820}
               className="h-full w-full object-cover"

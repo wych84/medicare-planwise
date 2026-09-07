@@ -3,21 +3,21 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     quote:
-      "I was completely lost until I called. My advisor walked me through everything slowly and never made me feel rushed. I finally understand my coverage.",
+      "Estaba completamente perdida hasta que llamé. Mi asesora me explicó todo con calma y nunca me hizo sentir apurada. Por fin entiendo mi cobertura.",
     name: "Margaret R.",
-    detail: "Enrolled in Medigap, Ohio",
+    detail: "Inscrita en Medigap, Ohio",
   },
   {
     quote:
-      "My advisor found a plan that kept both my doctors and saved me almost $90 a month. Honest, kind, and genuinely on my side.",
+      "Mi asesora encontró un plan que mantuvo a mis dos médicos y me ahorró casi $90 al mes. Honesta, amable y genuinamente de mi lado.",
     name: "James T.",
     detail: "Medicare Advantage, Arizona",
   },
   {
     quote:
-      "What I appreciated most was the personal check-ins after I enrolled. It's rare to feel this cared for these days.",
-    name: "Dorothy & Bill K.",
-    detail: "Part D review, Florida",
+      "Lo que más aprecié fueron las llamadas personales después de inscribirme. Es raro sentirse tan bien atendido hoy en día.",
+    name: "Dorothy y Bill K.",
+    detail: "Revisión de Parte D, Florida",
   },
 ]
 
@@ -26,9 +26,9 @@ export function Testimonials() {
     <section className="bg-secondary/40">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent">Client stories</p>
+          <p className="text-sm font-medium uppercase tracking-wider text-accent">Historias de clientes</p>
           <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-            Real people, real peace of mind
+            Personas reales, tranquilidad real
           </h2>
         </div>
 

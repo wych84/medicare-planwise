@@ -51,7 +51,7 @@
 
 :root {
   color-scheme: light;
-  /* Medicare PlanWise theme — warm off-white canvas */
+  /* Confianza Insurance Services theme — warm off-white canvas */
   --background: oklch(0.985 0.005 95);
   --foreground: oklch(0.26 0.045 245);
   --card: oklch(1 0 0);

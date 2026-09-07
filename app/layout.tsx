@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Medicare PlanWise — Personalized Medicare Guidance You Can Trust',
+  title: 'Confianza Insurance Services — Asesoría de Medicare personalizada y de confianza',
   description:
-    'Medicare PlanWise is an independent advisory practice helping you understand your options and choose the right Medicare plan with unbiased, personalized one-on-one guidance.',
+    'Confianza Insurance Services es una práctica de asesoría independiente que le ayuda a entender sus opciones y elegir el plan de Medicare adecuado con orientación personalizada e imparcial.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${poppins.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">

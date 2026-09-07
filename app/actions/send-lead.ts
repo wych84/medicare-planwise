@@ -7,14 +7,15 @@ export type LeadState = {
   message?: string
 }
 
-const TO_EMAIL = "medicareplanwise@gmail.com"
+const TO_EMAIL = "joyce@confianzainsuranceservices.com"
 
 export async function sendLead(_prevState: LeadState, formData: FormData): Promise<LeadState> {
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
     return {
       status: "error",
-      message: "Email service is not configured yet. Please call or email me directly for now.",
+      message:
+        "El servicio de correo aún no está configurado. Por favor, llámeme o escríbame directamente por ahora.",
     }
   }
 
@@ -25,35 +26,41 @@ export async function sendLead(_prevState: LeadState, formData: FormData): Promi
   const zip = String(formData.get("zip") ?? "").trim()
 
   if (!firstName || !lastName || !phone || !email || !zip) {
-    return { status: "error", message: "Please fill out every field and try again." }
+    return { status: "error", message: "Por favor, complete todos los campos e inténtelo de nuevo." }
   }
 
   const resend = new Resend(apiKey)
 
   try {
     const { error } = await resend.emails.send({
-      // Sends from your verified domain. Make sure medicareplanwise.com is
+      // Sends from your verified domain. Make sure confianzainsuranceservices.com is
       // verified in Resend's Domains section (add the DNS records they provide).
-      from: "Medicare PlanWise <leads@medicareplanwise.com>",
+      from: "Confianza Insurance Services <leads@confianzainsuranceservices.com>",
       to: [TO_EMAIL],
       replyTo: email,
-      subject: `New Medicare review request from ${firstName} ${lastName}`,
+      subject: `Nueva solicitud de revisión de Medicare de ${firstName} ${lastName}`,
       text: [
-        `Name: ${firstName} ${lastName}`,
-        `Phone: ${phone}`,
-        `Email: ${email}`,
-        `ZIP code: ${zip}`,
+        `Nombre: ${firstName} ${lastName}`,
+        `Teléfono: ${phone}`,
+        `Correo electrónico: ${email}`,
+        `Código postal: ${zip}`,
       ].join("\n"),
     })
 
     if (error) {
       console.log("[v0] Resend error:", error)
-      return { status: "error", message: "Something went wrong sending your request. Please try again." }
+      return {
+        status: "error",
+        message: "Ocurrió un error al enviar su solicitud. Por favor, inténtelo de nuevo.",
+      }
     }
 
     return { status: "success" }
   } catch (err) {
     console.log("[v0] sendLead exception:", err)
-    return { status: "error", message: "Something went wrong sending your request. Please try again." }
+    return {
+      status: "error",
+      message: "Ocurrió un error al enviar su solicitud. Por favor, inténtelo de nuevo.",
+    }
   }
 }

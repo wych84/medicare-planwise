@@ -18,26 +18,26 @@ export function ContactCta() {
         <div className="grid lg:grid-cols-2">
           <div className="flex flex-col justify-center p-8 md:p-12 lg:p-14">
             <p className="text-sm font-medium uppercase tracking-wider text-accent">
-              Free, no-obligation review
+              Revisión gratuita y sin compromiso
             </p>
             <h2 className="mt-3 text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
-              Let&apos;s find the plan that fits your life
+              Encontremos el plan que se ajusta a su vida
             </h2>
             <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
-              Share a few details and I&apos;ll personally reach out at a time that works for you.
-              No pressure, ever.
+              Comparta algunos datos y me comunicaré con usted personalmente en el momento que mejor
+              le convenga. Sin presión, nunca.
             </p>
 
             <a
-              href="tel:18005550123"
+              href="tel:+17147698445"
               className="mt-8 inline-flex items-center gap-3 text-foreground"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-accent">
                 <Phone className="h-5 w-5" aria-hidden="true" />
               </span>
               <span>
-                <span className="block text-sm text-muted-foreground">Prefer to talk now?</span>
-                <span className="font-serif text-xl font-semibold">1-800-555-0123</span>
+                <span className="block text-sm text-muted-foreground">¿Prefiere hablar ahora?</span>
+                <span className="font-serif text-xl font-semibold">714-769-8445</span>
               </span>
             </a>
           </div>
@@ -49,23 +49,23 @@ export function ContactCta() {
                   <Check className="h-7 w-7" aria-hidden="true" />
                 </span>
                 <h3 className="mt-5 font-serif text-2xl font-semibold text-foreground">
-                  Thank you!
+                  ¡Gracias!
                 </h3>
                 <p className="mt-2 max-w-xs leading-relaxed text-muted-foreground">
-                  I&apos;ll be in touch within one business day to schedule your free review.
+                  Me comunicaré con usted dentro de un día hábil para agendar su revisión gratuita.
                 </p>
               </div>
             ) : (
               <form action={formAction} className="flex flex-col gap-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="First name" name="firstName" autoComplete="given-name" />
-                  <Field label="Last name" name="lastName" autoComplete="family-name" />
+                  <Field label="Nombre" name="firstName" autoComplete="given-name" />
+                  <Field label="Apellido" name="lastName" autoComplete="family-name" />
                 </div>
-                <Field label="Phone number" name="phone" type="tel" autoComplete="tel" />
-                <Field label="Email" name="email" type="email" autoComplete="email" />
+                <Field label="Número de teléfono" name="phone" type="tel" autoComplete="tel" />
+                <Field label="Correo electrónico" name="email" type="email" autoComplete="email" />
                 <div className="flex flex-col gap-2">
                   <label htmlFor="zip" className="text-sm font-medium text-foreground">
-                    ZIP code
+                    Código postal
                   </label>
                   <input
                     id="zip"
@@ -82,8 +82,8 @@ export function ContactCta() {
                   </p>
                 ) : null}
                 <p className="text-center text-xs leading-relaxed text-muted-foreground">
-                  By submitting, you agree to be contacted by a licensed advisor. I respect your
-                  privacy and never sell your information.
+                  Al enviar, usted acepta ser contactado por una asesora con licencia. Respeto su
+                  privacidad y nunca vendo su información.
                 </p>
               </form>
             )}
@@ -101,11 +101,11 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-1 h-4 w-4 animate-spin" aria-hidden="true" />
-          Sending...
+          Enviando...
         </>
       ) : (
         <>
-          Request my free review
+          Solicitar mi revisión gratuita
           <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
         </>
       )}
