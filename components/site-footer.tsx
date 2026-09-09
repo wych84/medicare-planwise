@@ -30,10 +30,10 @@ export function SiteFooter() {
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                 <a
-                  href="mailto:joyce@confianzainsuranceservices.com"
+                  href="mailto:info@confianzainsuranceservices.com"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  joyce@confianzainsuranceservices.com
+                  info@confianzainsuranceservices.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
