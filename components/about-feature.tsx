@@ -24,7 +24,7 @@ export function AboutFeature() {
           </p>
 
           <p className="mt-6 font-serif text-lg font-semibold text-primary-foreground">
-            — Joyce C
+            — Joyce Yang
           </p>
 
           <ul className="mt-8 inline-flex flex-col gap-4 text-left">

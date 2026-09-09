@@ -5,7 +5,7 @@ const testimonials = [
     quote:
       "Estaba completamente perdida hasta que llamé. Mi asesora me explicó todo con calma y nunca me hizo sentir apurada. Por fin entiendo mi cobertura.",
     name: "Margaret R.",
-    detail: "Inscrita en Medigap, Ohio",
+    detail: "Inscrita en Medigap, Texas",
   },
   {
     quote:
@@ -17,7 +17,7 @@ const testimonials = [
     quote:
       "Lo que más aprecié fueron las llamadas personales después de inscribirme. Es raro sentirse tan bien atendido hoy en día.",
     name: "Dorothy y Bill K.",
-    detail: "Revisión de Parte D, Florida",
+    detail: "Revisión de Parte D, California",
   },
 ]
 
