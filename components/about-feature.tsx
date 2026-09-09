@@ -34,6 +34,9 @@ export function AboutFeature() {
             ))}
           </ul>
 
+          <p className="mt-8 text-xs text-primary-foreground/60">
+            Joyce Chun — Fundadora, Confianza Insurance Services
+          </p>
         </div>
       </div>
     </section>

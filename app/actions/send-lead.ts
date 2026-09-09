@@ -7,7 +7,7 @@ export type LeadState = {
   message?: string
 }
 
-const TO_EMAIL = "joyce@confianzainsuranceservices.com"
+const TO_EMAIL = "info@confianzainsuranceservices.com"
 
 export async function sendLead(_prevState: LeadState, formData: FormData): Promise<LeadState> {
   const apiKey = process.env.RESEND_API_KEY
