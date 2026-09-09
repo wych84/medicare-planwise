@@ -23,6 +23,10 @@ export function AboutFeature() {
             familia.
           </p>
 
+          <p className="mt-6 font-serif text-lg font-semibold text-primary-foreground">
+            — Joyce C
+          </p>
+
           <ul className="mt-8 inline-flex flex-col gap-4 text-left">
             {points.map((point) => (
               <li key={point} className="flex items-start gap-3">
