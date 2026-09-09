@@ -24,7 +24,10 @@ export function AboutFeature() {
           </p>
 
           <p className="mt-6 font-serif text-lg font-semibold text-primary-foreground">
-            — Joyce Yang
+            — Joyce | Confianza Insurance Services
+          </p>
+          <p className="mt-1 text-sm text-primary-foreground/70">
+            Licensed Insurance Agent: Woo Chun
           </p>
 
           <ul className="mt-8 inline-flex flex-col gap-4 text-left">
