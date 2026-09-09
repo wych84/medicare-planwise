@@ -36,9 +36,11 @@ export function SiteFooter() {
                   joyce@confianzainsuranceservices.com
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-start gap-3">
                 <BadgeCheck className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                <span className="text-sm text-muted-foreground">Licencia de CA #0M47941</span>
+                <span className="text-sm text-muted-foreground">
+                  Licencias: CA #0M47941 · TX #3543231 · AZ #18866641
+                </span>
               </li>
             </ul>
           </div>
